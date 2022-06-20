@@ -5,11 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
+    <script th:src="@{/js/bootstrap/bootstrap.bundle.min.js}"></script>
+    <title>Home</title>
 </head>
 
 <body>
     <h1>I am Home page</h1>
+    <div class="container">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Hi I'm Tome</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Nice to meet you</h6>
+                <p class="card-text">I'm 18 years old.</p>
+                <a href="#" class="card-link">more ...</a>
+                <a href="#" class="card-link">Another Info ...</a>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">姓名</th>
+                    <th scope="col">年齡</th>
+                    <th scope="col">性別</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td th:text="${userName}"></td>
+                    <td th:text="${userAge}"></td>
+                    <td th:text="${userSex}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 
 </html>
