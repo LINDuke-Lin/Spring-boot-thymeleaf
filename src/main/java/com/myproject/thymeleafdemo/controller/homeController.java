@@ -15,5 +15,4 @@ public class homeController {
 
         return "home";
     }
-
 }
