@@ -15,10 +15,4 @@ public class homeController {
 
         return "home";
     }
-
-    @GetMapping("base")
-    public String getBase() {
-        return "base";
-    }
-
 }
