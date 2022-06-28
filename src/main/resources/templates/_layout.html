@@ -5,21 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet">
-    <!-- Icons -->
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 
+    <link rel="stylesheet" th:href="@{/css/admin/fonts-all.css}">
+    <link rel="stylesheet" th:href="@{/css/admin/icon-all.css}">
     <link rel="stylesheet" th:href="@{/css/bootstrap/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/admin/nucleo-icons.css}">
     <link rel="stylesheet" th:href="@{/css/admin/black-dashboard.css}">
     <link rel="stylesheet" th:href="@{/css/site.css}">
-    <!-- <script th:src="@{/js/bootstrap/bootstrap.bundle.min.js}"></script> -->
-    <script th:src="@{/js/site.js}"></script>
     <title>Home</title>
 </head>
 
-<body>
+<body class="">
     <!-- <div th:insert="wrapper :: wrapper"></div> -->
     <div class="wrapper">
         <div class="sidebar" th:insert="sidebar :: sidebar"></div>
@@ -108,8 +104,10 @@
                 </div>
             </div>
             <!-- End Navbar -->
-            <div class="content" layout:fragment="content">
-                <p>Changing contents</p>
+            <div class="content">
+                <div class="row mh-80" layout:fragment="content">
+
+                </div>
             </div>
         </div>
         <footer class="footer">
@@ -140,19 +138,45 @@
                 </div>
             </div>
         </footer>
-
+    </div>
+    <div class="fixed-plugin">
+        <div class="dropdown show-dropdown">
+            <a href="#" data-toggle="dropdown">
+                <i class="fa fa-cog fa-2x"> </i>
+            </a>
+            <ul class="dropdown-menu">
+                <li class="header-title"> Sidebar Background</li>
+                <li class="adjustments-line">
+                    <a href="javascript:void(0)" class="switch-trigger background-color">
+                        <div class="badge-colors text-center">
+                            <span class="badge filter badge-primary active" data-color="primary"></span>
+                            <span class="badge filter badge-info" data-color="blue"></span>
+                            <span class="badge filter badge-success" data-color="green"></span>
+                        </div>
+                        <div class="clearfix"></div>
+                    </a>
+                </li>
+                <li class="adjustments-line text-center color-change">
+                    <span class="color-label">LIGHT MODE</span>
+                    <span class="badge light-badge mr-2"></span>
+                    <span class="badge dark-badge ml-2"></span>
+                    <span class="color-label">DARK MODE</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Core -->
     <script th:src="@{/js/admin/core/jquery.min.js}"></script>
     <script th:src="@{/js/admin/core/popper.min.js}"></script>
-    <script th:src="@{/js/admin/core/bootstrap.min.js}"></script>
+    <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
     <script th:src="@{/js/admin/plugins/perfect-scrollbar.jquery.min.js}"></script>
     <script th:src="@{/js/admin/plugins/bootstrap-notify.js}"></script>
 
     <!-- Theme JS -->
     <script th:src="@{/js/admin/black-dashboard.min.js}"></script>
     <script th:src="@{/js/site.js}"></script>
+    <script th:src="@{/js/_layout.js}"></script>
 </body>
 
 </html>
