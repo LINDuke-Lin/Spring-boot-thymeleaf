@@ -38,8 +38,8 @@
                 </div>
             </div>
             <!-- End Navbar -->
-            <div class="content">
-                <div class="row mh-80" layout:fragment="content"></div>
+            <div class="content" layout:fragment="content">
+
             </div>
             <footer class="footer" th:insert="share/footer :: footer"></footer>
         </div>
@@ -77,11 +77,20 @@
     <script th:src="@{/js/bootstrap/bootstrap.min.js}"></script>
     <script th:src="@{/js/admin/plugins/perfect-scrollbar.jquery.min.js}"></script>
     <script th:src="@{/js/admin/plugins/bootstrap-notify.js}"></script>
+    <script th:src="@{/js/admin/plugins/chartjs.min.js}"></script>
 
     <!-- Theme JS -->
     <script th:src="@{/js/admin/black-dashboard.min.js}"></script>
     <script th:src="@{/js/site.js}"></script>
     <script th:src="@{/js/_layout.js}"></script>
+
+    <!-- axios -->
+    <script th:src="@{/js/axios/axios.min.js}"></script>
+    <script th:src="@{/js/utils/axiosPlugin.js}"></script>
+    <script th:src="@{/js/api/api.js}"></script>
+
+    <th:block layout:fragment="scripts">
+    </th:block>
 </body>
 
 </html>
