@@ -96,7 +96,12 @@
 
     <th:block layout:fragment="scripts">
         <script>
-
+            function create() {
+                getError().then((res) => {
+                    console.log(res);
+                });
+            }
+            create();
         </script>
     </th:block>
 </body>
